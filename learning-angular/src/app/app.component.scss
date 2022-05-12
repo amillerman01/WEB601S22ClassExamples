@@ -1,9 +1,16 @@
 .rocket-ship-heading{
+  //padding: 50px;
 
-  padding: 50px;
+  //span {
+  //  background-color: red;
+  //  display: inline-block;
+  //}
+}
+.rocket-ship-heading span {
+  background-color: red;
+  display: inline-block;
+}
 
-  span {
-    background-color: red;
-    display: inline-block;
-  }
+.red{
+  color: red;
 }
