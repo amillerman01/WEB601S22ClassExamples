@@ -12,6 +12,9 @@ export class AppComponent {
   tertiaryName = 'Alex'; // this variable will ALSO now always be a string
 
   individualContentItem: Content;
+  secondContentItem: Content;
+
+  readonly valueCannotChange: number;
 
   constructor() {
 
@@ -19,6 +22,12 @@ export class AppComponent {
 
     let secondaryName: string;
     secondaryName = 'Andrew';
+
+    this.valueCannotChange = 0;
+    for (let i = 0; i < 1000; i++)
+    {
+      this.valueCannotChange++;
+    }
 
     // can't do this because tertiaryName is a string type
     // this.tertiaryName = 1;
@@ -33,7 +42,32 @@ export class AppComponent {
       name: "Mario Odyssey"
     };
 
+    // can't do this because it's readonly now
+    // can't do this because you need to replace the entire object in order to replace the id in the constructor
+    // this.individualContentItem.id = 1;
+
+
+    // you can however replace the whole object while you're in the constructor
+    this.individualContentItem = {
+      id: 1,
+      type: "Platformer",
+      imageUrl: "https://assets.nintendo.com/image/upload/c_scale,f_auto,q_auto,w_1280/v1/ncom/en_US/games/switch/s/super-mario-odyssey-switch/Video/posters/Super_Mario_Odyssey_Accolades_Trailer",
+      body: "Very good platformer on the Nintendo Switch",
+      name: "Mario Odyssey"
+    };
+
+
+    this.secondContentItem = {
+      id: 50,
+      type: "Platformer",
+      // don't need to specify a value for imageUrl because it's not optional
+      body: undefined,
+      name: "Kirby Mew game"
+    };
+
+
     this.processContent(this.individualContentItem);
+    this.processContent(this.secondContentItem);
   }
 
   updateName(): void{
@@ -42,6 +76,11 @@ export class AppComponent {
 
   processContent(contentItem: Content): void{
     console.log("Content item id: ", contentItem.id);
+    console.log("Content body: " + contentItem.body,
+      "Content body without tostring invoked: ", contentItem.body)
+    // cannot change the value after the constructor set it
+    // this.valueCannotChange = 80;
+
   }
 
 }
