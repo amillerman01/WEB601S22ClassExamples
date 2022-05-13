@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Content } from "./content";
+import {ContentList} from "./content-list";
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,8 @@ export class AppComponent {
 
   individualContentItem: Content;
   secondContentItem: Content;
+
+  listOfContent?: ContentList;
 
   readonly valueCannotChange: number;
 
@@ -65,6 +68,10 @@ export class AppComponent {
       name: "Kirby Mew game"
     };
 
+
+    this.listOfContent = new ContentList(this.individualContentItem);
+    console.log("View the array of items in the list: ", this.listOfContent.items);
+    console.log("The count of the list is: ", ContentList.contentCount);
 
     this.processContent(this.individualContentItem);
     this.processContent(this.secondContentItem);
