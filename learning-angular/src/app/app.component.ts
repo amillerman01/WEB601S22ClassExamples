@@ -7,7 +7,7 @@ import { Content } from "./content";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = '<h1>New heading!</h1>';
+  title = '<h1 class="heading-class-separate">New heading!</h1>';
   name: string; // this variable will now always be a string
   tertiaryName = 'Alex'; // this variable will ALSO now always be a string
 

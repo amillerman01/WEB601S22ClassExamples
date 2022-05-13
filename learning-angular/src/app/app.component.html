@@ -1,5 +1,6 @@
 <span [innerHTML]="title" class="red"></span> app is running!
 
+<span><h1 class="heading-class-separate">This will unfortunately be yellow</h1></span>
 <div>
   The person who taught you HTML and CSS is {{ name }}
 </div>
@@ -16,4 +17,9 @@
   The first game is: {{ individualContentItem.name }}
   <br>
   The first game is also: {{ individualContentItem['name'] }}
+</div>
+
+<div class="image-wrapper">
+  Image link is: <img src="{{ individualContentItem.imageUrl }}">
+  Image link is: <img [src]="individualContentItem.imageUrl">
 </div>
