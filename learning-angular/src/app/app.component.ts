@@ -32,9 +32,16 @@ export class AppComponent {
       body: "Very good platformer on the Nintendo Switch",
       name: "Mario Odyssey"
     };
+
+    this.processContent(this.individualContentItem);
   }
 
   updateName(): void{
     this.name = "Andrew";
   }
+
+  processContent(contentItem: Content): void{
+    console.log("Content item id: ", contentItem.id);
+  }
+
 }
