@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '<h1>New heading!</h1>';
+  name: string;
+
+  constructor() {
+
+    this.name = 'Peter';
+
+  }
 }
