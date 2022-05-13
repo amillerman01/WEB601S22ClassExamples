@@ -17,7 +17,13 @@ export class AppComponent {
     let secondaryName: string;
     secondaryName = 'Andrew';
 
-    // can't do this becasue tertiaryName is a string type
+    // can't do this because tertiaryName is a string type
     // this.tertiaryName = 1;
+
+    this.updateName();
+  }
+
+  updateName(): void{
+    this.name = "Andrew";
   }
 }
