@@ -68,6 +68,11 @@ export class AppComponent {
 
     this.processContent(this.individualContentItem);
     this.processContent(this.secondContentItem);
+
+    console.log("Separating my optional test")
+    this.processContentOptionally(this.individualContentItem);
+    this.processContentOptionally();
+
   }
 
   updateName(): void{
@@ -78,6 +83,18 @@ export class AppComponent {
     console.log("Content item id: ", contentItem.id);
     console.log("Content body: " + contentItem.body,
       "Content body without tostring invoked: ", contentItem.body)
+    // cannot change the value after the constructor set it
+    // this.valueCannotChange = 80;
+
+  }
+  processContentOptionally(contentItem?: Content): void{
+    // console.log("Content item id: ", contentItem.id); // can't access undefined.id
+     console.log("Content item id: ", contentItem?.id); // if contentItem is set, we access the id, otherwise we don't
+    if(contentItem)
+    {
+      console.log("Content body: " + contentItem.body,
+        "Content body without tostring invoked: ", contentItem.body)
+    }
     // cannot change the value after the constructor set it
     // this.valueCannotChange = 80;
 
