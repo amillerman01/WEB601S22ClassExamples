@@ -1,2 +1,8 @@
-<p>content-card works!</p>
-<h1>Tag within the content card</h1>
+<!-- <h2 *ngIf="this.contentItem"> -->
+<!-- don't need to do the if statement check if we're using the ? on the item below-->
+<h2>
+  {{ contentItem?.name }}
+</h2>
+<h2 *ngIf="this.contentItem2">
+  {{ contentItem2.name }}
+</h2>
