@@ -20,6 +20,9 @@ export class List {
   }
 
   printProperties(index: number): string {
+    if (this._items.length <= index || index < 0) {
+      return `<h2>Error, invalid index requested: ${index}</h2>`;
+    }
     return `<div class="content-wrapper">
               <h1>${this._items[index].title}</h1>
               <p>${this._items[index].body}</p>
