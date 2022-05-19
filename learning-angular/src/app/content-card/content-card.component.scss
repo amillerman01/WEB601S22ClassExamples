@@ -5,11 +5,25 @@
   margin: 8px auto;
   border: 1px solid #000;
   padding: 8px;
+
+  &.chess-player-0 {
+    // & means this selector is applied directly to :host
+    background-color: green;
+  }
+
+  h1 {
+    margin: 0;
+  }
 }
 
-h1 {
-  margin: 0;
-}
+//the result of using the &
+// :host.chess-player-0{
+
+// }
+
+// :host h1{
+//   margin: 0;
+// }
 
 img {
   max-width: 400px;
