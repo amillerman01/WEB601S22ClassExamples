@@ -1,36 +1,3 @@
-<span [innerHTML]="title" class="red"></span> app is running!
+<h1>A header on the app component, with margins intact</h1>
 
-<span><h1 class="heading-class-separate">This will unfortunately be yellow</h1></span>
-<div>
-  The person who taught you HTML and CSS is {{ name }}
-</div>
-
-<!--<div>-->
-<!--  I don't have access to secondary name: {{ secondaryName }}-->
-<!--</div>-->
-
-<div>
-  The person who is teaching you Angular is {{ tertiaryName }}
-</div>
-
-<div>
-  The first game is: {{ individualContentItem.name }}
-  <br>
-  The first game is also: {{ individualContentItem['name'] }}
-</div>
-
-<div class="image-wrapper">
-  Image link is: <img src="{{ individualContentItem.imageUrl }}">
-  Image link is: <img [src]="individualContentItem.imageUrl">
-</div>
-
-
-<div>
-  Accessing the readonly value: {{ valueCannotChange }}
-</div>
-
-
-<div>
-  Body contents of individualContentItem: <strong>{{ individualContentItem.body }}</strong><br>
-  Body contents of secondContentitem: <strong>{{ secondContentItem.body }}</strong>
-</div>
+<app-content-card></app-content-card>
