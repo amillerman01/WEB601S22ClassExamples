@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Content } from "./content";
-import {ContentList} from "./content-list";
+import { ContentList } from "./content-list";
 
 @Component({
   selector: 'app-root',
@@ -27,8 +27,7 @@ export class AppComponent {
     secondaryName = 'Andrew';
 
     this.valueCannotChange = 0;
-    for (let i = 0; i < 1000; i++)
-    {
+    for (let i = 0; i < 1000; i++) {
       this.valueCannotChange++;
     }
 
@@ -82,11 +81,11 @@ export class AppComponent {
 
   }
 
-  updateName(): void{
+  updateName(): void {
     this.name = "Andrew";
   }
 
-  processContent(contentItem: Content): void{
+  processContent(contentItem: Content): void {
     console.log("Content item id: ", contentItem.id);
     console.log("Content body: " + contentItem.body,
       "Content body without tostring invoked: ", contentItem.body)
@@ -94,11 +93,10 @@ export class AppComponent {
     // this.valueCannotChange = 80;
 
   }
-  processContentOptionally(contentItem?: Content): void{
+  processContentOptionally(contentItem?: Content): void {
     // console.log("Content item id: ", contentItem.id); // can't access undefined.id
-     console.log("Content item id: ", contentItem?.id); // if contentItem is set, we access the id, otherwise we don't
-    if(contentItem)
-    {
+    console.log("Content item id: ", contentItem?.id); // if contentItem is set, we access the id, otherwise we don't
+    if (contentItem) {
       console.log("Content body: " + contentItem.body,
         "Content body without tostring invoked: ", contentItem.body)
     }
