@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Content } from '../content';
 
 @Component({
@@ -8,20 +8,13 @@ import { Content } from '../content';
   styleUrls: ['./content-card.component.scss']
 })
 export class ContentCardComponent implements OnInit {
-  contentItem?: Content;
+  @Input() contentItem?: Content;
   contentItem2?: Content;
 
   constructor() {
   }
 
   ngOnInit(): void {
-    this.contentItem = {
-      id: 0,
-      name: 'Magnus Carlsen',
-      body: "Current world champ",
-      imageUrl: "https://i.guim.co.uk/img/media/ad35976aca03db7b6b355111a3dd4e3db687d724/0_136_2048_1229/master/2048.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=c2b38f880baf6f2edba26b98fdf4420c",
-      type: "GM"
-    };
 
     if (this.contentItem2) {
       console.log(this.contentItem2.name);

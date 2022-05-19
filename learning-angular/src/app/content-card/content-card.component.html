@@ -3,6 +3,10 @@
 <h2>
   {{ contentItem?.name }}
 </h2>
-<h2 *ngIf="this.contentItem2">
+<!-- <img *ngIf="contentItem" src="{{contentItem.imageUrl}}"> -->
+<img *ngIf="contentItem" [src]="contentItem.imageUrl">
+<p class="body">{{contentItem?.body}}</p>
+<div class="type">{{contentItem?.type}}</div>
+<!-- <h2 *ngIf="this.contentItem2">
   {{ contentItem2.name }}
-</h2>
+</h2> -->
