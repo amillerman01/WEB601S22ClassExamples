@@ -20,12 +20,12 @@ export class List {
   }
 
   printProperties(index: number): string {
-    return `<div class="content-wrapper" style="text-align: center; width: 500px; margin: 0 auto;">
+    return `<div class="content-wrapper">
               <h1>${this._items[index].title}</h1>
               <p>${this._items[index].body}</p>
-              <h6 style="color: dodgerblue;">${this._items[index].author}</h6>
+              <h6>${this._items[index].author}</h6>
               <img src="${this._items[index].imageLink}">
-              <div style="font-weight: bold;">${this._items[index].type}</div>
+              <div>${this._items[index].type}</div>
             </div>`;
   }
 }
