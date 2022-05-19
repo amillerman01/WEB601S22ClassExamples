@@ -33,7 +33,6 @@ export class AppComponent {
     }, {
       id: 3,
       name: 'Ben Finegold',
-      body: "Fide Grandmaster",
       imageUrl: "https://chessdailynews.com/wp-content/uploads/2010/01/Ben-Finegold-4.jpg",
       type: "GM"
     }];
