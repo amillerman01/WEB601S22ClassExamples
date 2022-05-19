@@ -6,7 +6,7 @@
   border: 1px solid #000;
   padding: 8px;
 
-  &.chess-player-0 {
+  &.is-first {
     // & means this selector is applied directly to :host
     background-color: green;
   }
