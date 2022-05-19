@@ -1,5 +1,16 @@
 <h1>A header on the app component, with margins intact</h1>
 
-<app-content-card *ngFor="let item of chessPlayers; index as i; first as isFirst" [contentItem]="item"
-  class="chess-player-{{i}}" [class.is-first]="isFirst">
-</app-content-card>
+<h2>All the items in the list</h2>
+<!-- Display the list of items and apply css based on if it's the first one -->
+<div>
+  <app-content-card *ngFor="let item of chessPlayers; index as i; first as isFirst" [contentItem]="item"
+    class="chess-player-{{i}}" [class.is-first]="isFirst">
+  </app-content-card>
+</div>
+
+<h1>The first 2 items in the list</h1>
+<!-- only show the first 2 items -->
+<div *ngFor="let item of chessPlayers; index as i; first as isFirst">
+  <app-content-card [contentItem]="item" class="chess-player-{{i}}" [class.is-first]="isFirst" *ngIf="i < 2">
+  </app-content-card>
+</div>
