@@ -21,4 +21,17 @@ export class ContentCardComponent implements OnInit {
     }
   }
 
+  /*
+    methodName(variableName: variableType): methodReturnType{
+    return .......;
+    }
+  */
+  processContent(contentVariableName: Content): void {
+    if (contentVariableName.body == undefined) {
+      console.log("Body is empty, no value");
+      return;
+    }
+    console.log(contentVariableName.body);
+  }
+
 }
