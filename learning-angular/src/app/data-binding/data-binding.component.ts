@@ -16,4 +16,7 @@ export class DataBindingComponent implements OnInit {
   clickEvent(): void {
     console.log("Type value is: ", this.type);
   }
+  clickEventTwoWayBinding(): void {
+    this.twoWayBindingInputValue = "The new default value";
+  }
 }
