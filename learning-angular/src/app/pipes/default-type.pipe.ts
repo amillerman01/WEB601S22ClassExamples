@@ -6,10 +6,8 @@ import { Content } from '../content';
 })
 export class DefaultTypePipe implements PipeTransform {
 
-  transform(contentItem: Content): string {
-    if (contentItem.type)
-      return contentItem.type;
-    return "IM";
+  transform(contentItem: Content, defaultValue?: string): string {
+    return contentItem.type || defaultValue || "IM";
   }
 
 }
