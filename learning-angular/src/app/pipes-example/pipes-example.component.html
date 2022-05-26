@@ -1,9 +1,23 @@
 <h2>Pipes examples</h2>
 <div>
+  {{ "HELLO" | lowercase }}
+</div>
+<div>
+  {{ someStringValue | uppercase }}
+</div>
+<div>
   <div>Without the pipe</div>
   {{ today}}
 </div>
 <div>
   <div>With the default date pipe</div>
   {{ today | date }}
+</div>
+<div>
+  <div>With the default date pipe</div>
+  {{ today | date: "medium" }}
+</div>
+<div>
+  <div>With the default date pipe</div>
+  {{ today | date: "dd/MM/yy" }}
 </div>
