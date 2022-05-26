@@ -8,7 +8,8 @@
   <div class="type">{{ chessPlayer.type }}</div>
   <div class="hashtags" *ngIf="chessPlayer.hashtags">
     <span *ngFor="let hashtag of chessPlayer.hashtags">
-      {{ hashtag }}
+      #{{ hashtag }}
     </span>
+    <!-- <span>{{ chessPlayer.hashtags.replace(cp => "<span>" + cp + "</span>").join(" ")}}</span> -->
   </div>
 </div>
