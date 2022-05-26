@@ -6,13 +6,15 @@ import { ContentCardComponent } from './content-card/content-card.component';
 import { TemplateSyntaxComponent } from './template-syntax/template-syntax.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
+import { PipesExampleComponent } from './pipes-example/pipes-example.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContentCardComponent,
     TemplateSyntaxComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    PipesExampleComponent
   ],
   imports: [
     BrowserModule,
