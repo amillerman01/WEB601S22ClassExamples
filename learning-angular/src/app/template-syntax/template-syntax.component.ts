@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class TemplateSyntaxComponent implements OnInit {
 
   date = new Date();
+  simpleNumberValue = 0;
   constructor() { }
 
   ngOnInit(): void {
@@ -17,7 +18,8 @@ export class TemplateSyntaxComponent implements OnInit {
   drawCard(): string {
     return "This is the body content of the card"
   }
-  checkInputValue(theValueOfTheInputBox: string) {
-    // console.log(theValueOfTheInputBox);
+  checkInputValue(theValueOfTheInputBox: any) {
+    console.log(theValueOfTheInputBox);
+    console.log("The value is: ", theValueOfTheInputBox.value);
   }
 }

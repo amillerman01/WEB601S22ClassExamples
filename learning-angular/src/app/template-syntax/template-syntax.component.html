@@ -9,5 +9,9 @@
   {{ drawCard() }}
 </div>
 <div>
-  <input #inputValue> <button (click)="checkInputValue(inputValue.value)">Check The Value</button>{{ inputValue.value }}
+  <input #inputValue> <button (click)="simpleNumberValue = 10; checkInputValue(inputValue);">Check The Value</button>{{
+  inputValue.value }}
+</div>
+<div>
+  Simple Number Value: {{ simpleNumberValue }}
 </div>
