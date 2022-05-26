@@ -1,6 +1,9 @@
 :host {
   border: 2px dashed crimson;
   display: block;
+  padding: 16px;
+  margin: 0 auto 16px;
+  max-width: 500px;
 }
 
 header {}
@@ -8,4 +11,32 @@ header {}
 img {
   display: block;
   width: 100%;
+}
+
+p {
+  font-weight: bold;
+}
+
+.author {
+  text-align: center;
+}
+
+.type {
+  text-align: right;
+  font-weight: bold;
+}
+
+.hashtags {
+  border: 1px solid #000;
+  margin: 8px;
+  padding: 8px;
+  text-align: justify;
+
+  span {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lemonchiffon;
+    padding: 8px;
+    display: inline-block;
+    margin: 0 8px;
+  }
 }
