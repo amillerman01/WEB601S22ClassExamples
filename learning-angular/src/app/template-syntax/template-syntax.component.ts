@@ -9,7 +9,14 @@ export class TemplateSyntaxComponent implements OnInit {
 
   date = new Date();
   simpleNumberValue = 0;
-  constructor() { }
+  secondDate?: Date;
+  checkingElvis?: any; // checkingElvis.numberValue
+  constructor() {
+
+    this.checkingElvis = {
+      numberValue: 20
+    };
+  }
 
   ngOnInit(): void {
     console.log("The date variable actually contains: ", this.date);
