@@ -38,11 +38,11 @@ export class ContentListComponent implements OnInit {
       }, {
         id: 3,
         title: 'Ben Finegold',
-        body: "Fide Grandmaster",
+        // body: "Fide Grandmaster",
         author: "Alex Millerman",
-        imageLink: "https://chessdailynews.com/wp-content/uploads/2010/01/Ben-Finegold-4.jpg",
+        // imageLink: "https://chessdailynews.com/wp-content/uploads/2010/01/Ben-Finegold-4.jpg",
         type: "GM",
-        hashtags: ["gmat40", "neverplayf3"]
+        // hashtags: ["gmat40", "neverplayf3"]
       }, {
         id: 4,
         title: 'Viswanathan Anand',

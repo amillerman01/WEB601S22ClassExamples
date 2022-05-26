@@ -1,12 +1,12 @@
 <div *ngIf="chessPlayer">
   <header>{{ chessPlayer.title }}</header>
-  <img [src]="chessPlayer.imageLink" (click)="displayAuthorAndId()">
-  <p>
+  <img *ngIf="chessPlayer.imageLink" [src]="chessPlayer.imageLink" (click)="displayAuthorAndId()">
+  <p *ngIf="chessPlayer.body">
     {{ chessPlayer.body }}
   </p>
   <div class="author">{{ chessPlayer.author }}</div>
   <div class="type">{{ chessPlayer.type }}</div>
-  <div class="hashtags">
+  <div class="hashtags" *ngIf="chessPlayer.hashtags">
     <span *ngFor="let hashtag of chessPlayer.hashtags">
       {{ hashtag }}
     </span>
