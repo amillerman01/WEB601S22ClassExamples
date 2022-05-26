@@ -1,1 +1,4 @@
-<p>content-card works!</p>
+<div *ngIf="chessPlayer">
+  <header>{{ chessPlayer.title }}</header>
+  <img [src]="chessPlayer.imageLink" (click)="displayAuthorAndId()">
+</div>

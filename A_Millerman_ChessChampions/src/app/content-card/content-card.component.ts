@@ -19,7 +19,12 @@ export class ContentCardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log("value of chess player: ", this.chessPlayer);
+    if (this.chessPlayer) {
+      console.log("value of chess player: ", this.chessPlayer.title);
+    }
+  }
+  displayAuthorAndId(): void {
+    console.log("Chess Player Author: ", this.chessPlayer?.author, ", Chess Player ID: ", this.chessPlayer?.id);
   }
 
 }
