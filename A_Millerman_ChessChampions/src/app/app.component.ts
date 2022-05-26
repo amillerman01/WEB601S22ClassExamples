@@ -10,7 +10,6 @@ export class AppComponent {
   title = 'A_Millerman_ChessChampions';
 
   constructor() {
-    let contentitem: Content;
 
   }
 }
