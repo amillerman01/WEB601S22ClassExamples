@@ -4,6 +4,15 @@
   padding: 16px;
   margin: 0 auto 16px;
   max-width: 500px;
+
+  &.is-odd {
+    background-color: #ffffff;
+  }
+
+}
+
+:host.is-even {
+  background-color: lightgrey;
 }
 
 header {}
