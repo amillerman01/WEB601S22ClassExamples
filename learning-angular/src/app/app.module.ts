@@ -7,6 +7,7 @@ import { TemplateSyntaxComponent } from './template-syntax/template-syntax.compo
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { PipesExampleComponent } from './pipes-example/pipes-example.component';
+import { DefaultTypePipe } from './pipes/default-type.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PipesExampleComponent } from './pipes-example/pipes-example.component';
     ContentCardComponent,
     TemplateSyntaxComponent,
     DataBindingComponent,
-    PipesExampleComponent
+    PipesExampleComponent,
+    DefaultTypePipe
   ],
   imports: [
     BrowserModule,

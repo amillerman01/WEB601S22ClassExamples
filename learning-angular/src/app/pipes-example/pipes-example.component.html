@@ -14,10 +14,14 @@
   {{ today | date }}
 </div>
 <div>
-  <div>With the default date pipe</div>
+  <div>With the medium date format</div>
   {{ today | date: "medium" }}
 </div>
 <div>
-  <div>With the default date pipe</div>
+  <div>With the custom date format</div>
   {{ today | date: "dd/MM/yy" }}
+</div>
+<div>
+  <div>With the medium date format AND everything will be in lowercase letters</div>
+  {{ today | lowercase | date: "medium" }}
 </div>
