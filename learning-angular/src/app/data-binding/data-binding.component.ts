@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-binding.component.scss']
 })
 export class DataBindingComponent implements OnInit {
-
+  inputValue: string = "Value set from the ts file";
   type: string = "Chess";
+  twoWayBindingInputValue: string = "this is the default value";
   constructor() { }
 
   ngOnInit(): void {
