@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataBindingComponent implements OnInit {
 
+  type: string = "Chess";
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  clickEvent(): void {
+    console.log("Type value is: ", this.type);
+  }
 }
