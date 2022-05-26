@@ -29,12 +29,10 @@ export class AppComponent {
       name: 'Rameshbabu Praggnanandhaa',
       body: "Grandmaster",
       imageUrl: "https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F220222035049-01-praggnanandhaa-chess-portrait-file-2019.jpg",
-      type: "GM"
     }, {
       id: 3,
       name: 'Ben Finegold',
       imageUrl: "https://chessdailynews.com/wp-content/uploads/2010/01/Ben-Finegold-4.jpg",
-      type: "GM"
     }];
 
   }

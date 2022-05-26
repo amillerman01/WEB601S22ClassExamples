@@ -9,7 +9,7 @@
 <ng-template #elseBlockNameIsWhateverYouWant>
   <p class="not-found">No body content found</p>
 </ng-template>
-<div class="type">{{contentItem?.type}}</div>
+<div class="type" *ngIf="contentItem">{{contentItem | defaultType }}</div>
 <!-- <h2 *ngIf="this.contentItem2">
   {{ contentItem2.name }}
 </h2> -->
