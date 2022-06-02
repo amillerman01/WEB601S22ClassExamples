@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { Content } from '../models/content';
 
 @Component({
@@ -13,6 +14,7 @@ export class ContentListComponent implements OnInit {
     message: "",
     found: false
   };
+  valueChanged$ = new BehaviorSubject<boolean>(false);
 
   constructor() {
     this.chessPlayersList = [
@@ -89,6 +91,7 @@ export class ContentListComponent implements OnInit {
   ngOnInit(): void {
   }
   checkForAuthorInList(authorNameValue: string): void {
+    this.valueChanged$.next(false);
     if (this.chessPlayersList.some(player => player.author.toLowerCase() === authorNameValue.toLowerCase())) {
       this.authorSearchMessage.message = "Author Found";
       this.authorSearchMessage.found = true;
@@ -97,6 +100,9 @@ export class ContentListComponent implements OnInit {
       this.authorSearchMessage.message = "Author Not Found";
       this.authorSearchMessage.found = false;
     }
+  }
+  searchHasChanged(): void {
+    this.valueChanged$.next(true);
   }
 
 }

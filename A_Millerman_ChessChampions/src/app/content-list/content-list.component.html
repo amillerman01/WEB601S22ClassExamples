@@ -1,8 +1,10 @@
-<div><label>
+<div>
+  <label>
     Author name search:
-    <input autofocus #authorToSearchFor>
+    <input autofocus #authorToSearchFor (input)="searchHasChanged()">
   </label>
-  <button (click)="checkForAuthorInList(authorToSearchFor.value)">Check for Author</button>
+  <button (click)="checkForAuthorInList(authorToSearchFor.value)" [disabled]="!(valueChanged$ | async)">Check for
+    Author</button>
 </div>
 <div class="author-error" [style]="authorSearchMessage.found ? 'color: blue' : 'color: grey'">
   {{ authorSearchMessage.message }}
