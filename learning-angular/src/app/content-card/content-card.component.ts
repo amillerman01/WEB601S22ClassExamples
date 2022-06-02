@@ -18,6 +18,10 @@ export class ContentCardComponent implements OnInit {
   contentItem2?: Content;
   // need this here so we can access the enum values in the html file
   ChessPlayerTItleENUMValues = ChessPlayerTitle;
+  nameStyle = {
+    'color': 'red',
+    'font-size': '20px'
+  };
 
   constructor() {
   }

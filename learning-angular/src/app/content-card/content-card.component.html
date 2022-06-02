@@ -1,6 +1,6 @@
 <!-- <h2 *ngIf="this.contentItem"> -->
 <!-- don't need to do the if statement check if we're using the ? on the item below-->
-<h2>
+<h2 [ngStyle]="nameStyle">
   {{ contentItem?.name }}
 </h2>
 <!-- <img *ngIf="contentItem" src="{{contentItem.imageUrl}}"> -->

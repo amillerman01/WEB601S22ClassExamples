@@ -11,7 +11,7 @@
 <hr>
 
 
-<h1>A header on the app component, with margins intact</h1>
+<h1 id="headerId">A header on the app component, with margins intact</h1>
 
 <h2>All the items in the list</h2>
 <!-- Display the list of items and apply css based on if it's the first one -->
@@ -24,11 +24,14 @@
 
   <!-- Want to specify a case for each application of a class -->
   <app-content-card
-    *ngFor="let item of (chessPlayers | contentTagged); index as i; first as isFirst, even as isEven; odd as isOdd"
-    [contentItem]="item" class="chess-player-{{i}}"
+    *ngFor="let item of (chessPlayers | contentTagged); index as i; first as isFirst; last as isLast; even as isEven; odd as isOdd"
+    [contentItem]="item" class="chess-player-{{i}}" [class.is-last]="isLast" [style.color]="'blue'"
     [ngClass]="{'is-first': isFirst, 'is-even': isEven, 'is-odd': isOdd}">
   </app-content-card>
 </div>
+
+<h1>Using the attr binding</h1>
+<div [attr.innerHTML]="'somevalue'"></div>
 
 <button (click)="addPlayer()">Add Hikaru to array</button>
 <!-- <span>{{ item }}</span> -->
