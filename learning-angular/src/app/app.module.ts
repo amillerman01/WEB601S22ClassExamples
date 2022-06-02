@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { PipesExampleComponent } from './pipes-example/pipes-example.component';
 import { DefaultTypePipe } from './pipes/default-type.pipe';
 import { ContentTaggedPipe } from './pipes/content-tagged.pipe';
+import { HighlighterDirective } from './directives/highlighter.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContentTaggedPipe } from './pipes/content-tagged.pipe';
     DataBindingComponent,
     PipesExampleComponent,
     DefaultTypePipe,
-    ContentTaggedPipe
+    ContentTaggedPipe,
+    HighlighterDirective
   ],
   imports: [
     BrowserModule,
