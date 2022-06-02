@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Content } from '../content';
-import { ChessPlayerTitle } from '../content-card/content-card.component';
+import { ChessPlayerTitle } from '../enums/chess-player-title';
 
 @Pipe({
   name: 'defaultType'

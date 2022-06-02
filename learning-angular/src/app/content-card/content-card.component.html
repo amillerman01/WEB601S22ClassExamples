@@ -11,14 +11,18 @@
 <ng-template #elseBlockNameIsWhateverYouWant>
   <p class="not-found">No body content found</p>
 </ng-template>
+<!-- Just using the enum for the switch case check -->
 <ng-template [ngIf]="contentItem">
   <div class="type" [ngSwitch]='contentItem.type'>
-    <span *ngSwitchCase="ChessPlayerTItleENUMValues.GM">Grand Master</span>
-    <span *ngSwitchCase='ChessPlayerTItleENUMValues.IM'>International Master</span>
-    <span *ngSwitchCase='ChessPlayerTItleENUMValues.FM'>FIDE Master</span>
-    <span *ngSwitchDefault>No Type</span>
+    <span *ngSwitchCase="ChessPlayerTitleENUMValues.GM">Grand Master</span>
+    <span *ngSwitchCase='ChessPlayerTitleENUMValues.IM'>International Master</span>
+    <span *ngSwitchCase='ChessPlayerTitleENUMValues.FM'>FIDE Master</span>
   </div>
 </ng-template>
+<!-- We can have another enum set for storing the title names themselves -->
+<!-- <ng-template [ngIf]="contentItem">
+  <span>{{ ChessPlayerTitleName[(contentItem.type as string) || ""] }}</span>
+</ng-template> -->
 <!-- <h2 *ngIf="this.contentItem2">
   {{ contentItem2.name }}
 </h2> -->

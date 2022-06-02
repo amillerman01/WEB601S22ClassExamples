@@ -26,12 +26,9 @@
   <app-content-card
     *ngFor="let item of (chessPlayers | contentTagged); index as i; first as isFirst; last as isLast; even as isEven; odd as isOdd"
     [contentItem]="item" class="chess-player-{{i}}" [class.is-last]="isLast" [style.color]="'blue'"
-    [ngClass]="{'is-first': isFirst, 'is-even': isEven, 'is-odd': isOdd}">
+    [ngClass]="{'is-first': isFirst, 'is-even': isEven, 'is-odd': isOdd}" [attr.title]="item.type || ''">
   </app-content-card>
 </div>
-
-<h1>Using the attr binding</h1>
-<div [attr.innerHTML]="'somevalue'"></div>
 
 <button (click)="addPlayer()">Add Hikaru to array</button>
 <!-- <span>{{ item }}</span> -->
