@@ -36,7 +36,8 @@ export class AppComponent {
       id: 3,
       name: 'Ben Finegold',
       imageUrl: "https://chessdailynews.com/wp-content/uploads/2010/01/Ben-Finegold-4.jpg",
-      tags: []
+      type: 'GM',
+      tags: ["neverplayf3"]
     }];
 
   }
