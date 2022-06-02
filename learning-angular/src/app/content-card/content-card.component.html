@@ -12,7 +12,12 @@
   <p class="not-found">No body content found</p>
 </ng-template>
 <ng-template [ngIf]="contentItem">
-  <div class="type">{{contentItem | defaultType: "GM" }}</div>
+  <div class="type" [ngSwitch]='contentItem.type'>
+    <span *ngSwitchCase="ChessPlayerTItleENUMValues.GM">Grand Master</span>
+    <span *ngSwitchCase='ChessPlayerTItleENUMValues.IM'>International Master</span>
+    <span *ngSwitchCase='ChessPlayerTItleENUMValues.FM'>FIDE Master</span>
+    <span *ngSwitchDefault>No Type</span>
+  </div>
 </ng-template>
 <!-- <h2 *ngIf="this.contentItem2">
   {{ contentItem2.name }}

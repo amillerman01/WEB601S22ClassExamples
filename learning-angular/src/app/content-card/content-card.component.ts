@@ -1,6 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Content } from '../content';
 
+export enum ChessPlayerTitle {
+  GM = "GM",
+  IM = "IM",
+  FM = "FM"
+}
+
 @Component({
   selector: 'app-content-card',
   templateUrl: './content-card.component.html',
@@ -10,6 +16,8 @@ import { Content } from '../content';
 export class ContentCardComponent implements OnInit {
   @Input() contentItem?: Content;
   contentItem2?: Content;
+  // need this here so we can access the enum values in the html file
+  ChessPlayerTItleENUMValues = ChessPlayerTitle;
 
   constructor() {
   }
