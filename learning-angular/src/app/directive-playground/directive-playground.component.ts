@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivePlaygroundComponent implements OnInit {
 
+  variableColour: string = "maroon";
   constructor() { }
 
   ngOnInit(): void {

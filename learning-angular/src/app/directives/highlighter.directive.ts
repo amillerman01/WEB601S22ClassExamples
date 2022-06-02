@@ -1,14 +1,16 @@
-import { Directive, ElementRef } from '@angular/core';
+import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 
 @Directive({
   selector: '[appHighlighter]'
 })
-export class HighlighterDirective {
-
+export class HighlighterDirective implements OnInit {
+  @Input() colour?: string;
   constructor(private el: ElementRef) {
-    el.nativeElement.style.backgroundColor = "green";
   }
 
+  ngOnInit(): void {
+    this.el.nativeElement.style.backgroundColor = this.colour || "green";
+  }
   // changeColor(): void {
   //   this.el
   // }
