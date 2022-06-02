@@ -1,3 +1,12 @@
+<div><label>
+    Author name search:
+    <input #authorToSearchFor>
+  </label>
+  <button (click)="checkForAuthorInList(authorToSearchFor.value)">Check for Author</button>
+</div>
+<div class="author-error" [style]="authorSearchMessage.found ? 'color: blue' : 'color: grey'">
+  {{ authorSearchMessage.message }}
+</div>
 <!-- <app-content-card *ngFor="let individualPlayer of chessPlayersList; even as isEven; odd as idOdd" [chessPlayer]="individualPlayer"
   class="{{ isEven ? 'is-even': ''}}" class="{{ isodd ? 'is-odd': ''}}"></app-content-card> -->
 
