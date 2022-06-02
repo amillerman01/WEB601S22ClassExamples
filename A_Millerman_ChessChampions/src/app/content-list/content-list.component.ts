@@ -51,6 +51,31 @@ export class ContentListComponent implements OnInit {
         imageLink: "https://im.rediff.com/sports/2020/dec/10anand.jpg",
         type: "GM",
         hashtags: ["gmover50"]
+      }, {
+        id: 5,
+        title: "Ding Liren",
+        body: "Took part in 30+ tournaments in China within the span of a month to quality for the world candidates tournament",
+        author: "Levy Rozman",
+        type: "GM"
+      }, {
+        id: 6,
+        title: "Levy Rozman",
+        body: "AKA GothamChess",
+        author: "Alex Millerman",
+        type: "IM",
+        hashtags: ["makesmoredoingyoutube", "notasupergm"]
+      }, {
+        id: 7,
+        title: "Alex Millerman",
+        body: "Will never have a chess title, probably",
+        author: "Alex Millerman",
+        hashtags: ["watchesmorethanheplayschess"]
+      }, {
+        id: 8,
+        title: "Andrew Steele",
+        body: "Maybe plays chess?",
+        author: "Alex Millerman",
+        type: "",
       }
     ];
 
