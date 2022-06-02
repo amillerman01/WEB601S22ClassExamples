@@ -9,6 +9,7 @@ import { ContentList } from "./content-list";
 })
 export class AppComponent {
   chessPlayers: Content[];
+  cardClasses = ['is-first', 'is-even', 'is-odd'];
 
   constructor() {
     // this.chessPlayers = [];
