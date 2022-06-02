@@ -10,6 +10,7 @@ import { PipesExampleComponent } from './pipes-example/pipes-example.component';
 import { DefaultTypePipe } from './pipes/default-type.pipe';
 import { ContentTaggedPipe } from './pipes/content-tagged.pipe';
 import { HighlighterDirective } from './directives/highlighter.directive';
+import { DirectivePlaygroundComponent } from './directive-playground/directive-playground.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HighlighterDirective } from './directives/highlighter.directive';
     PipesExampleComponent,
     DefaultTypePipe,
     ContentTaggedPipe,
-    HighlighterDirective
+    HighlighterDirective,
+    DirectivePlaygroundComponent
   ],
   imports: [
     BrowserModule,
