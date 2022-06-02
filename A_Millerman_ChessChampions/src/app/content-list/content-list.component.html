@@ -7,16 +7,16 @@
 
 <!-- no type -->
 <app-content-card *ngFor="let individualPlayer of (chessPlayersList | filterChessPlayerType); even as isEven"
-  [chessPlayer]="individualPlayer" [class.is-even]="isEven" [class.is-odd]="!isEven"></app-content-card>
+  [chessPlayer]="individualPlayer" [class.is-even]="isEven" [class.is-odd]="!isEven" class="no-type"></app-content-card>
 
 <!-- IM type -->
 <app-content-card *ngFor="let individualPlayer of (chessPlayersList | filterChessPlayerType: 'IM'); even as isEven"
-  [chessPlayer]="individualPlayer" [class.is-even]="isEven" [class.is-odd]="!isEven"></app-content-card>
+  [chessPlayer]="individualPlayer" [class.is-even]="isEven" [class.is-odd]="!isEven" class="im-type"></app-content-card>
 
 <!-- FM type -->
 <app-content-card *ngFor="let individualPlayer of (chessPlayersList | filterChessPlayerType: 'FM'); even as isEven"
-  [chessPlayer]="individualPlayer" [class.is-even]="isEven" [class.is-odd]="!isEven"></app-content-card>
+  [chessPlayer]="individualPlayer" [class.is-even]="isEven" [class.is-odd]="!isEven" class="fm-type"></app-content-card>
 
 <!-- GM type -->
 <app-content-card *ngFor="let individualPlayer of (chessPlayersList | filterChessPlayerType: 'GM'); even as isEven"
-  [chessPlayer]="individualPlayer" [class.is-even]="isEven" [class.is-odd]="!isEven"></app-content-card>
+  [chessPlayer]="individualPlayer" [class.is-even]="isEven" [class.is-odd]="!isEven" class="gm-type"></app-content-card>

@@ -11,11 +11,31 @@
     background-color: #ffffff;
   }
 
+  &.is-even {
+    background-color: lightgrey;
+  }
+
+  &.no-type {
+    background-color: #ddd;
+    color: #0a2719;
+  }
+
+  &.im-type {
+    background-color: darkviolet;
+    color: black;
+  }
+
+  &.fm-type {
+    background-color: maroon;
+    color: white;
+  }
+
+  &.gm-type {
+    background-color: dodgerblue;
+    color: #eeeeee;
+  }
 }
 
-:host.is-even {
-  background-color: lightgrey;
-}
 
 header {
   font-size: 30px;
@@ -53,6 +73,7 @@ p {
   span {
     font-family: Arial, Helvetica, sans-serif;
     background-color: lemonchiffon;
+    color: #000000;
     padding: 8px;
     display: inline-block;
     margin: 0 8px;
