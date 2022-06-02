@@ -89,7 +89,7 @@ export class ContentListComponent implements OnInit {
   ngOnInit(): void {
   }
   checkForAuthorInList(authorNameValue: string): void {
-    if (this.chessPlayersList.some(player => player.author === authorNameValue)) {
+    if (this.chessPlayersList.some(player => player.author.toLowerCase() === authorNameValue.toLowerCase())) {
       this.authorSearchMessage.message = "Author Found";
       this.authorSearchMessage.found = true;
     }
