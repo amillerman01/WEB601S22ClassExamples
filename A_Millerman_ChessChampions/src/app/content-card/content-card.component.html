@@ -1,5 +1,5 @@
 <div *ngIf="chessPlayer">
-  <header class="title" appHighlightImportantData>{{ chessPlayer.title }}</header>
+  <header class="title" appHighlightImportantData colour="cadetblue">{{ chessPlayer.title }}</header>
   <img *ngIf="chessPlayer.imageLink; else defaultChessImage" [src]="chessPlayer.imageLink"
     (click)="displayAuthorAndId()">
   <p *ngIf="chessPlayer.body">
