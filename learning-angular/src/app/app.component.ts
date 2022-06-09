@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Content } from "./content";
 import { ContentList } from "./content-list";
 import { ContentService } from './services/content.service';
@@ -8,14 +8,16 @@ import { ContentService } from './services/content.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   chessPlayers: Content[];
   cardClasses = ['is-first', 'is-even', 'is-odd'];
 
   constructor(private contentService: ContentService) {
-    // this.chessPlayers = [];
-    this.chessPlayers = contentService.getContent();
+    this.chessPlayers = [];
+  }
 
+  ngOnInit(): void {
+    this.chessPlayers = this.contentService.getContent();
   }
   addPlayer(): void {
     this.chessPlayers.push({
