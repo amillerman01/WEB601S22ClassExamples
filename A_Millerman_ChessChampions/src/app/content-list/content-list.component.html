@@ -18,27 +18,31 @@
 <!-- no type -->
 <app-content-card
   *ngFor="let individualPlayer of (chessPlayersList | filterChessPlayerType); even as isEven; last as isLast"
-  [chessPlayer]="individualPlayer" [class.is-even]="isEven" [class.is-odd]="!isEven" class="no-type" [isLast]="isLast"
+  [chessPlayer]="individualPlayer" [class.is-even]="isEven" [class.is-odd]="!isEven" [class.is-last]="isLast"
+  class="no-type" [isLast]="isLast"
   [class]="individualPlayer.author.toLowerCase() === authorToSearchFor.value.toLowerCase() ? 'player-found' : ''">
 </app-content-card>
 
 <!-- IM type -->
 <app-content-card
   *ngFor="let individualPlayer of (chessPlayersList | filterChessPlayerType: 'IM'); even as isEven; last as isLast"
-  [chessPlayer]="individualPlayer" [class.is-even]="isEven" [class.is-odd]="!isEven" class="im-type" [isLast]="isLast"
+  [chessPlayer]="individualPlayer" [class.is-even]="isEven" [class.is-odd]="!isEven" [class.is-last]="isLast"
+  class="im-type" [isLast]="isLast"
   [class.player-found]="individualPlayer.author.toLowerCase() === authorToSearchFor.value.toLowerCase()">
 </app-content-card>
 
 <!-- FM type -->
 <app-content-card
   *ngFor="let individualPlayer of (chessPlayersList | filterChessPlayerType: 'FM'); even as isEven; last as isLast"
-  [chessPlayer]="individualPlayer" [class.is-even]="isEven" [class.is-odd]="!isEven" class="fm-type" [isLast]="isLast"
+  [chessPlayer]="individualPlayer" [class.is-even]="isEven" [class.is-odd]="!isEven" [class.is-last]="isLast"
+  class="fm-type" [isLast]="isLast"
   [class.player-found]="individualPlayer.author.toLowerCase() === authorToSearchFor.value.toLowerCase()">
 </app-content-card>
 
 <!-- GM type -->
 <app-content-card
   *ngFor="let individualPlayer of (chessPlayersList | filterChessPlayerType: 'GM'); even as isEven; last as isLast"
-  [chessPlayer]="individualPlayer" [class.is-even]="isEven" [class.is-odd]="!isEven" class="gm-type" [isLast]="isLast"
+  [chessPlayer]="individualPlayer" [class.is-even]="isEven" [class.is-odd]="!isEven" [class.is-last]="isLast"
+  class="gm-type" [isLast]="isLast"
   [class.player-found]="individualPlayer.author.toLowerCase() === authorToSearchFor.value.toLowerCase()">
 </app-content-card>

@@ -59,11 +59,24 @@ p {
   text-align: center;
 }
 
+:host.is-last .author.tagFontColor {
+  color: darkred;
+}
+
+:host.is-last .author.typeBorder {
+  border: 4px solid #0000ff;
+}
+
 .type {
   text-align: right;
   font-weight: bold;
   // display: inline-block;
 }
+
+:host.is-last .type.typeBorder {
+  border: 4px solid #0000ff;
+}
+
 
 .hashtags {
   border: 1px solid #000;
@@ -84,4 +97,16 @@ p {
     margin: 0 8px;
     font-weight: bold;
   }
+
+  span.tagFontColor {
+    color: darkred;
+  }
+}
+
+div.typeBorder {
+  border: 4px solid #0000ff;
+}
+
+header.titleBackground {
+  // background-color:
 }

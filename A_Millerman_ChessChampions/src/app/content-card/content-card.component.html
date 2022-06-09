@@ -6,9 +6,12 @@
   <p *ngIf="chessPlayer.body">
     {{ chessPlayer.body }}
   </p>
-  <div *ngIf="isLast; else notLastElement" class="author" appHighlightImportantData highlightType="author"
-    colour="dodgerblue">{{ chessPlayer.author }}
+  <div class="author" appHighlightImportantData highlightType="author" colour="dodgerblue">
+    {{ chessPlayer.author }}
   </div>
+  <!-- <div *ngIf="isLast; else notLastElement" class="author" appHighlightImportantData highlightType="author"
+    colour="dodgerblue">{{ chessPlayer.author }}
+  </div> -->
   <div appHighlightImportantData [highlightType]="'type'" class="type">{{ chessPlayer.type }}</div>
   <div class="hashtags" *ngIf="chessPlayer.hashtags">
     <span appHighlightImportantData highlightType="tag" *ngFor="let hashtag of chessPlayer.hashtags">
@@ -22,6 +25,7 @@
   <img alt="Default Chess Image"
     src="https://images.chesscomfiles.com/uploads/v1/blog/291978.333e4ddb.668x375o.576e795e2298@2x.png">
 </ng-template>
+
 <ng-template #notLastElement>
   <div class="author">
     {{ chessPlayer?.author }}
