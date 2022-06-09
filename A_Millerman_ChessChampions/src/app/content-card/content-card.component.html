@@ -6,7 +6,8 @@
   <p *ngIf="chessPlayer.body">
     {{ chessPlayer.body }}
   </p>
-  <div class="author">{{ chessPlayer.author }}</div>
+  <div class="author" appHighlightImportantData highlightType="author" colour="dodgerblue">{{ chessPlayer.author }}
+  </div>
   <div appHighlightImportantData [highlightType]="'type'" class="type">{{ chessPlayer.type }}</div>
   <div class="hashtags" *ngIf="chessPlayer.hashtags">
     <span appHighlightImportantData highlightType="tag" *ngFor="let hashtag of chessPlayer.hashtags">
