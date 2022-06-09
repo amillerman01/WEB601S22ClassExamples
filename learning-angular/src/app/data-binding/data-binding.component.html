@@ -1,0 +1,35 @@
+<h2>One Way Binding</h2>
+<h3>Double handle bars / Interpolation</h3>
+<div>{{ type }}</div> <!-- We can't change the value in here -->
+<h3>Data binding to an attribute</h3>
+<div>Using the innerHTML attribute:</div>
+<div [innerHTML]="type"></div> <!-- We can't change the value in here -->
+<div>The longer version that angular uses:</div>
+<div>
+  <span bind-innerHtml="type"></span> <!-- We can't change the value in here -->
+</div>
+<h3>Input with 1 way binding</h3>
+<div>
+  Changing this does nothing to the value in the ts file:
+  <input [value]="inputValue">
+</div>
+<div>
+  This will always be the default value initially set:
+  {{ inputValue }}
+</div>
+
+<h2>Event Binding</h2>
+<button (click)="clickEvent()">Click me!</button>
+<button on-click="type = 'NotChess'">Click me!</button>
+
+<h2>Two way binding</h2>
+<div>
+  <input [(ngModel)]="twoWayBindingInputValue">
+  <!-- <input bindon-ngModel="twoWayBindingInputValue"> -->
+</div>
+<div>
+  Output value of input box: {{ twoWayBindingInputValue }}
+</div>
+<div>
+  <button (click)="clickEventTwoWayBinding()">Click me!</button>
+</div>

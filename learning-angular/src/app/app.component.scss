@@ -3,6 +3,23 @@ span {
   display: inline-block;
 }
 
-.red{
+.heading-class-separate {
+  color: yellow; // thankfully this will never happen
+  background-color: black;
+  display: inline-block;
+}
+
+.image-wrapper {
+  margin-top: 50px;
+  text-align: center;
+}
+
+img {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.red {
   color: red;
 }
