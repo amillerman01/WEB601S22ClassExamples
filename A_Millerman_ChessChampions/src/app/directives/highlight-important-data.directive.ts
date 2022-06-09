@@ -5,18 +5,30 @@ import { Directive, ElementRef, HostBinding, HostListener, Input } from '@angula
 })
 export class HighlightImportantDataDirective {
   private isHighlighted: boolean = false;
+  private initialColourOfTagText: string;
+
   @Input() colour: string = '';
   @HostBinding('style.backgroundColor') get textColour() {
     return this.isHighlighted ? this.colour : 'transparent';
   }
-  constructor(private elm: ElementRef) { }
+  constructor(private elm: ElementRef) {
+    this.initialColourOfTagText = this.elm.nativeElement.style.color;
+  }
 
-  // hover over type
+  // hover over type or tags
   @HostListener("mouseover") onMouseOver() {
-    this.elm.nativeElement.style.border = "4px solid #0000ff"
+    // set type background color
+    this.elm.nativeElement.style.border = "4px solid #0000ff";
+
+    // set tag font color
+    this.elm.nativeElement.style.color = 'darkred';
   }
   @HostListener("mouseout") onMouseOut() {
+    // reset type background color
     this.elm.nativeElement.style.border = "none"
+
+    // reset tag font color back to original value
+    this.elm.nativeElement.style.color = this.initialColourOfTagText;
   }
 
   // click on title
