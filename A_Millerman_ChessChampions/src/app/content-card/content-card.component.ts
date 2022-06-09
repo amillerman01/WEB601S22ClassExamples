@@ -8,6 +8,7 @@ import { Content } from '../models/content';
 })
 export class ContentCardComponent implements OnInit {
   @Input() chessPlayer?: Content;
+  @Input() isLast?: boolean;
 
   constructor() {
     // this.content = {
