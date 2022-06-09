@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Content } from '../content';
 import { ChessPlayerTitle } from '../enums/chess-player-title';
 import { ChessPlayerTitleName } from '../enums/chess-player-title-value';
+import { ContentService } from '../services/content.service';
 
 @Component({
   selector: 'app-content-card',
@@ -20,7 +21,7 @@ export class ContentCardComponent implements OnInit {
     'font-size': '20px'
   };
 
-  constructor() {
+  constructor(private contentService: ContentService) {
   }
 
   ngOnInit(): void {
