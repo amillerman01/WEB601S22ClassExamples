@@ -17,8 +17,20 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.chessPlayers = this.contentService.getContent();
+    this.contentService.getContent().subscribe((contentArrayFromService: Content[]) => {
+      this.chessPlayers = contentArrayFromService;
+    });
+
+    // this.contentService.updateContentItem({
+    //   id: 0,
+    //   // add rest of properties for a valid content item
+    // }).subscribe(contentList => {
+    //   console.log(contentList);
+    // })
+
+    // this.contentService.deleteContentItem(1).subscribe(() => { });
   }
+
   addPlayer(): void {
     this.chessPlayers.push({
       id: 4,
