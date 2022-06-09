@@ -1,6 +1,7 @@
 <div *ngIf="chessPlayer">
   <header>{{ chessPlayer.title }}</header>
-  <img *ngIf="chessPlayer.imageLink" [src]="chessPlayer.imageLink" (click)="displayAuthorAndId()">
+  <img *ngIf="chessPlayer.imageLink; else defaultChessImage" [src]="chessPlayer.imageLink"
+    (click)="displayAuthorAndId()">
   <p *ngIf="chessPlayer.body">
     {{ chessPlayer.body }}
   </p>
@@ -13,3 +14,8 @@
     <!-- <span>{{ chessPlayer.hashtags.replace(cp => "<span>" + cp + "</span>").join(" ")}}</span> -->
   </div>
 </div>
+
+<ng-template #defaultChessImage>
+  <img alt="Default Chess Image"
+    src="https://images.chesscomfiles.com/uploads/v1/blog/291978.333e4ddb.668x375o.576e795e2298@2x.png">
+</ng-template>
