@@ -11,7 +11,8 @@
     "generateclass": "ng g class",
     "generatecomponent": "ng g component",
     "generatepipe": "ng g pipe",
-    "generatedirective": "ng g d"
+    "generatedirective": "ng g d",
+    "generateservice": "ng generate service"
   },
   "private": true,
   "dependencies": {
