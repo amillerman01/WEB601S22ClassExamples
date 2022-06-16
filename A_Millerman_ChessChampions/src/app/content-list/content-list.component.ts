@@ -21,11 +21,24 @@ export class ContentListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.chessPlayersList = this.chessChampionService.getContent();
-
+    // getContent test
     this.chessChampionService.getContent().subscribe(chessChampionsArray =>
       this.chessPlayersList = chessChampionsArray);
+    // getContentItem test
+    this.chessChampionService.getContentItem(1).subscribe(chessChampionsSingleItem => {
+      console.log("Got the content item: ", chessChampionsSingleItem);
+    });
+    // addContentItem test
+    // this.chessChampionService.getContent().subscribe(chessChampionsArray =>
+    //   this.chessPlayersList = chessChampionsArray);
+    // updateContentItem test
+    // this.chessChampionService.getContent().subscribe(chessChampionsArray =>
+    //   this.chessPlayersList = chessChampionsArray);
+    // deleteContentItem test
+    // this.chessChampionService.getContent().subscribe(chessChampionsArray =>
+    //   this.chessPlayersList = chessChampionsArray);
   }
+
   checkForAuthorInList(authorNameValue: string): void {
     if (this.chessPlayersList.some(player => player.author.toLowerCase() === authorNameValue.toLowerCase())) {
       this.authorSearchMessage.message = "Author Found";

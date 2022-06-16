@@ -24,7 +24,7 @@ export const CHESSCHAMPIONS: Content[] = [
   }, {
     id: 1,
     title: 'Alexandra Botez',
-    body: "	Woman FIDE Master",
+    body: "Woman FIDE Master",
     author: "Alex Millerman",
     imageLink: "https://images.chesscomfiles.com/uploads/v1/master_player/7064c138-1af7-11eb-b69b-0371950d641f.8e25e027.5000x5000o.6254ebef0621.jpeg",
     type: "FM",
