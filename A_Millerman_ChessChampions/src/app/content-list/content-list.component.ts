@@ -9,6 +9,14 @@ import { ChessChampionService } from '../services/chess-champion.service';
 })
 export class ContentListComponent implements OnInit {
   chessPlayersList: Content[];
+  hikaru: Content = {
+    id: 100,
+    title: 'Hikaru Nakamura',
+    body: "A chess champion who became a successful youtuber instead",
+    author: "Alex Millerman",
+    type: "GM",
+    hashtags: ["supergm", "indepthanalysis"]
+  }
   types: string[] = ["", "IM", "FM", "GM"];
   authorSearchMessage = {
     message: "",
@@ -24,16 +32,21 @@ export class ContentListComponent implements OnInit {
     // getContent test
     this.chessChampionService.getContent().subscribe(chessChampionsArray =>
       this.chessPlayersList = chessChampionsArray);
-    // getContentItem test
+
+    // getContentItem test - worked
     // this.chessChampionService.getContentItem(1).subscribe(chessChampionsSingleItem => {
     //   console.log("Got the content item: ", chessChampionsSingleItem);
     // });
+
     // addContentItem test
-    // this.chessChampionService.getContent().subscribe(chessChampionsArray =>
-    //   this.chessPlayersList = chessChampionsArray);
+    this.chessChampionService.addContentItem(this.hikaru).subscribe(chessChampionsArray => {
+      console.log("Added Hikaru: ", chessChampionsArray);
+    });
+
     // updateContentItem test
     // this.chessChampionService.getContent().subscribe(chessChampionsArray =>
     //   this.chessPlayersList = chessChampionsArray);
+
     // deleteContentItem test
     // this.chessChampionService.getContent().subscribe(chessChampionsArray =>
     //   this.chessPlayersList = chessChampionsArray);
