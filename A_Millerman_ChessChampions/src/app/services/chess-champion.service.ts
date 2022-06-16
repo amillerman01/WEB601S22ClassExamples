@@ -28,4 +28,10 @@ export class ChessChampionService {
     }
     return of(DEFAULTCHESSCONTENT); // need to return something if the content isn't there
   }
+
+  addContentItem(newContentItem: Content): Observable<Content[]> {
+    CHESSCHAMPIONS.push(newContentItem);
+    return of(CHESSCHAMPIONS);
+  }
+
 }
