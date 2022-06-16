@@ -24,4 +24,12 @@ export class AppComponent {
     });
 
   }
+
+  checkForIdInList(idValue: string): void {
+    this.chessChampionService.getContentItem(Number(idValue)).subscribe(chessChampionsSingleItem => {
+      console.log("App component - Got the content item AGAIN: ", chessChampionsSingleItem);
+      this.individualPlayer = chessChampionsSingleItem;
+    });
+  }
+
 }
