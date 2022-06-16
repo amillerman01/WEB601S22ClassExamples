@@ -10,7 +10,7 @@ import { ChessChampionService } from '../services/chess-champion.service';
 export class ContentListComponent implements OnInit {
   chessPlayersList: Content[];
   hikaru: Content = {
-    id: 100,
+    id: 3,
     title: 'Hikaru Nakamura',
     body: "A chess champion who became a successful youtuber instead",
     author: "Alex Millerman",
@@ -38,14 +38,15 @@ export class ContentListComponent implements OnInit {
     //   console.log("Got the content item: ", chessChampionsSingleItem);
     // });
 
-    // addContentItem test
-    this.chessChampionService.addContentItem(this.hikaru).subscribe(chessChampionsArray => {
-      console.log("Added Hikaru: ", chessChampionsArray);
-    });
+    // addContentItem test - worked
+    // this.chessChampionService.addContentItem(this.hikaru).subscribe(chessChampionsArray => {
+    //   console.log("Added Hikaru: ", chessChampionsArray);
+    // });
 
-    // updateContentItem test
-    // this.chessChampionService.getContent().subscribe(chessChampionsArray =>
-    //   this.chessPlayersList = chessChampionsArray);
+    // updateContentItem test -
+    this.chessChampionService.updateContentItem(this.hikaru).subscribe(chessChampionsArray => {
+      console.log("updated Hikaru: ", chessChampionsArray);
+    });
 
     // deleteContentItem test
     // this.chessChampionService.getContent().subscribe(chessChampionsArray =>

@@ -39,8 +39,28 @@ export class ChessChampionService {
     // update the values of that item in the array with the values of the newContentItem
     // return the array after updating
 
+    CHESSCHAMPIONS.forEach((individualChessChampion, index) => {
+      // one potential solution
+      // if (individualChessChampion.id === newContentItem.id) // found them
+      // {
+      //   individualChessChampion.title = newContentItem.title;
+      //   individualChessChampion.body = newContentItem.body;
+      //   individualChessChampion.author = newContentItem.author;
+      //   individualChessChampion.imageLink = newContentItem.imageLink;
+      //   individualChessChampion.type = newContentItem.type;
+      //   individualChessChampion.hashtags = newContentItem.hashtags;
+      //   // return;
+      // }
 
-    return of([]);
+      if (individualChessChampion.id === newContentItem.id) // found them
+      {
+        console.log("Trying method 2");
+        CHESSCHAMPIONS[index] = newContentItem;
+        // return;
+      }
+    });
+
+    return of(CHESSCHAMPIONS);
   }
 
   // deleteContentItem(id: number): Observable<Content> {
