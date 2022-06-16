@@ -1,11 +1,17 @@
 import { Content } from "../models/content";
 
+/**
+ * Default invalid content item data
+ */
 export const DEFAULTCHESSCONTENT: Content = {
   id: -1,
   title: 'NOT FOUND',
   author: "NOT VALID",
 }
 
+/**
+ * Our array of chess champions
+ */
 export const CHESSCHAMPIONS: Content[] = [
   {
     id: 0,

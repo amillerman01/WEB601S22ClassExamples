@@ -14,6 +14,11 @@ export class ChessChampionService {
     return of(CHESSCHAMPIONS);
   }
 
+  /**
+   * Returns a single content item at a specified id
+   * @param id
+   * @returns
+   */
   getContentItem(id: number): Observable<Content> {
     for (var i = 0; i < CHESSCHAMPIONS.length; i++) // iterate through each chess champion
     {
