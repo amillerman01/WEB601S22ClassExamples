@@ -34,4 +34,17 @@ export class ChessChampionService {
     return of(CHESSCHAMPIONS);
   }
 
+  updateContentItem(newContentItem: Content): Observable<Content[]> {
+    // find item in chesschampions with same id as newcontentitem's id
+    // update the values of that item in the array with the values of the newContentItem
+    // return the array after updating
+
+
+    return of([]);
+  }
+
+  // deleteContentItem(id: number): Observable<Content> {
+
+  //   return of();
+  // }
 }

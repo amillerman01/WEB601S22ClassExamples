@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Content } from '../models/content';
+import { ChessChampionService } from '../services/chess-champion.service';
 
 @Component({
   selector: 'app-content-list',
@@ -14,12 +15,16 @@ export class ContentListComponent implements OnInit {
     found: false
   };
 
-  constructor() {
+  constructor(private chessChampionService: ChessChampionService) {
     this.chessPlayersList = [];
 
   }
 
   ngOnInit(): void {
+    // this.chessPlayersList = this.chessChampionService.getContent();
+
+    this.chessChampionService.getContent().subscribe(chessChampionsArray =>
+      this.chessPlayersList = chessChampionsArray);
   }
   checkForAuthorInList(authorNameValue: string): void {
     if (this.chessPlayersList.some(player => player.author.toLowerCase() === authorNameValue.toLowerCase())) {
