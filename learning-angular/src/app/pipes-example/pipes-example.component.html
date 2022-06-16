@@ -25,3 +25,15 @@
   <div>With the medium date format AND everything will be in lowercase letters</div>
   {{ today | date: "medium" | lowercase }}
 </div>
+<div>
+  <h2>Default Type pipe</h2>
+  {{ content | defaultType }}
+</div>
+<div>
+  <h2>Default Type pipe with no type and with parameter</h2>
+  {{ contentWithNoType | defaultType: "SUPER GM" }}
+</div>
+<div>
+  <h2>Default Type pipe with no type on the content</h2>
+  {{ contentWithNoType | defaultType }}
+</div>
