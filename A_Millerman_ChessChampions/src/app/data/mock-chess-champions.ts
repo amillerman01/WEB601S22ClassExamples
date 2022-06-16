@@ -1,4 +1,6 @@
-const CHESSCHAMPIONS = [
+import { Content } from "../models/content";
+
+export const CHESSCHAMPIONS: Content[] = [
   {
     id: 0,
     title: 'Magnus Carlsen',
