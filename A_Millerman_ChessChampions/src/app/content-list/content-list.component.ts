@@ -43,14 +43,15 @@ export class ContentListComponent implements OnInit {
     //   console.log("Added Hikaru: ", chessChampionsArray);
     // });
 
-    // updateContentItem test -
-    this.chessChampionService.updateContentItem(this.hikaru).subscribe(chessChampionsArray => {
-      console.log("updated Hikaru: ", chessChampionsArray);
-    });
+    // updateContentItem test - worked
+    // this.chessChampionService.updateContentItem(this.hikaru).subscribe(chessChampionsArray => {
+    //   console.log("updated Hikaru: ", chessChampionsArray);
+    // });
 
-    // deleteContentItem test
-    // this.chessChampionService.getContent().subscribe(chessChampionsArray =>
-    //   this.chessPlayersList = chessChampionsArray);
+    // deleteContentItem test - worked
+    // this.chessChampionService.deleteContentItem(1).subscribe(chessChampionsSingleItem => {
+    //   console.log("Deleted the content item: ", chessChampionsSingleItem);
+    // });
   }
 
   checkForAuthorInList(authorNameValue: string): void {

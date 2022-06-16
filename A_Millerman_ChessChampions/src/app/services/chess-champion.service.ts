@@ -63,8 +63,17 @@ export class ChessChampionService {
     return of(CHESSCHAMPIONS);
   }
 
-  // deleteContentItem(id: number): Observable<Content> {
+  deleteContentItem(id: number): Observable<Content> {
 
-  //   return of();
-  // }
+    for (var i = 0; i < CHESSCHAMPIONS.length; i++) // iterate through each chess champion
+    {
+      if (CHESSCHAMPIONS[i].id === id) { // found the item
+        // delete it from the array first
+        CHESSCHAMPIONS.splice(i, 1);
+        console.log("Deleted the item: ", CHESSCHAMPIONS);
+        return of(CHESSCHAMPIONS[i]);
+      }
+    }
+    return of(DEFAULTCHESSCONTENT); // need to return something if the content isn't there
+  }
 }
