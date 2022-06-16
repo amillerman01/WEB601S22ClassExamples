@@ -1,5 +1,11 @@
 import { Content } from "../models/content";
 
+export const DEFAULTCHESSCONTENT: Content = {
+  id: -1,
+  title: 'NOT FOUND',
+  author: "NOT VALID",
+}
+
 export const CHESSCHAMPIONS: Content[] = [
   {
     id: 0,
