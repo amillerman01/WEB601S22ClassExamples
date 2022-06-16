@@ -30,7 +30,10 @@ export class ChessChampionService {
   }
 
   addContentItem(newContentItem: Content): Observable<Content[]> {
-    CHESSCHAMPIONS.push(newContentItem);
+    // if there aren't some chess champions with the same id number, push the array item
+    if (!CHESSCHAMPIONS.some(chessPlayer => chessPlayer.id === newContentItem.id)) {
+      CHESSCHAMPIONS.push(newContentItem);
+    }
     return of(CHESSCHAMPIONS);
   }
 
