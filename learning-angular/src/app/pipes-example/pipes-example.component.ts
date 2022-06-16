@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Content } from '../content';
 
 @Component({
   selector: 'app-pipes-example',
@@ -6,6 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pipes-example.component.scss']
 })
 export class PipesExampleComponent implements OnInit {
+  content: Content = {
+    id: 4,
+    name: 'Hikaru Nikamura',
+    imageUrl: "",
+    type: "GM",
+    tags: ["becameAYoutuberInstead"]
+  };
+  contentWithNoType: Content = {
+    id: 4,
+    name: 'Hikaru Nikamura',
+    imageUrl: "",
+    tags: ["becameAYoutuberInstead"]
+  };
 
   today: Date = new Date();
 
