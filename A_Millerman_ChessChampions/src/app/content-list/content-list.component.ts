@@ -25,9 +25,9 @@ export class ContentListComponent implements OnInit {
     this.chessChampionService.getContent().subscribe(chessChampionsArray =>
       this.chessPlayersList = chessChampionsArray);
     // getContentItem test
-    this.chessChampionService.getContentItem(1).subscribe(chessChampionsSingleItem => {
-      console.log("Got the content item: ", chessChampionsSingleItem);
-    });
+    // this.chessChampionService.getContentItem(1).subscribe(chessChampionsSingleItem => {
+    //   console.log("Got the content item: ", chessChampionsSingleItem);
+    // });
     // addContentItem test
     // this.chessChampionService.getContent().subscribe(chessChampionsArray =>
     //   this.chessPlayersList = chessChampionsArray);
