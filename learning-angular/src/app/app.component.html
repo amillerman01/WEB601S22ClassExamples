@@ -1,36 +1,46 @@
-<span [innerHTML]="title" class="red"></span> app is running!
+<app-directive-playground></app-directive-playground>
 
-<span><h1 class="heading-class-separate">This will unfortunately be yellow</h1></span>
+<hr>
+
+<app-pipes-example></app-pipes-example>
+
+<hr>
+
+<app-data-binding></app-data-binding>
+
+<hr>
+
+<app-template-syntax></app-template-syntax>
+
+<hr>
+
+
+<h1 id="headerId">A header on the app component, with margins intact</h1>
+
+<h2>All the items in the list</h2>
+<!-- Display the list of items and apply css based on if it's the first one -->
 <div>
-  The person who taught you HTML and CSS is {{ name }}
+  <!-- Passing in an array, but no conditions for each class -->
+  <!-- <app-content-card
+    *ngFor="let item of (chessPlayers | contentTagged); index as i; first as isFirst, even as isEven; odd as isOdd"
+    [contentItem]="item" class="chess-player-{{i}}" [ngClass]="cardClasses">
+  </app-content-card> -->
+
+  <!-- Want to specify a case for each application of a class -->
+  <app-content-card
+    *ngFor="let item of (chessPlayers | contentTagged); index as i; first as isFirst; last as isLast; even as isEven; odd as isOdd"
+    [contentItem]="item" class="chess-player-{{i}}" [class.is-last]="isLast" [style.color]="'blue'"
+    [ngClass]="{'is-first': isFirst, 'is-even': isEven, 'is-odd': isOdd}" [attr.title]="item.type || ''">
+  </app-content-card>
 </div>
 
-<!--<div>-->
-<!--  I don't have access to secondary name: {{ secondaryName }}-->
-<!--</div>-->
-
-<div>
-  The person who is teaching you Angular is {{ tertiaryName }}
+<button (click)="addPlayer()">Add Hikaru to array</button>
+<!-- <span>{{ item }}</span> -->
+<!-- <h1>The first 2 items in the list</h1> -->
+<!-- only show the first 2 items -->
+<!-- <div *ngFor="let item of chessPlayers; index as i; first as isFirst">
+  <app-content-card [contentItem]="item" class="chess-player-{{i}}" [class.is-first]="isFirst" *ngIf="i < 2">
+  </app-content-card>
 </div>
 
-<div>
-  The first game is: {{ individualContentItem.name }}
-  <br>
-  The first game is also: {{ individualContentItem['name'] }}
-</div>
-
-<div class="image-wrapper">
-  Image link is: <img src="{{ individualContentItem.imageUrl }}">
-  Image link is: <img [src]="individualContentItem.imageUrl">
-</div>
-
-
-<div>
-  Accessing the readonly value: {{ valueCannotChange }}
-</div>
-
-
-<div>
-  Body contents of individualContentItem: <strong>{{ individualContentItem.body }}</strong><br>
-  Body contents of secondContentitem: <strong>{{ secondContentItem.body }}</strong>
-</div>
+ -->

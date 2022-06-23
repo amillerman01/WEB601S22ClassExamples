@@ -1,0 +1,39 @@
+<h2>Pipes examples</h2>
+<div>
+  {{ "HELLO" | lowercase }}
+</div>
+<div>
+  {{ someStringValue | uppercase }}
+</div>
+<div>
+  <div>Without the pipe</div>
+  {{ today}}
+</div>
+<div>
+  <div>With the default date pipe</div>
+  {{ today | date }}
+</div>
+<div>
+  <div>With the medium date format</div>
+  {{ today | date: "medium" }}
+</div>
+<div>
+  <div>With the custom date format</div>
+  {{ today | date: "dd/MM/yy" }}
+</div>
+<div>
+  <div>With the medium date format AND everything will be in lowercase letters</div>
+  {{ today | date: "medium" | lowercase }}
+</div>
+<div>
+  <h2>Default Type pipe</h2>
+  {{ content | defaultType }}
+</div>
+<div>
+  <h2>Default Type pipe with no type and with parameter</h2>
+  {{ contentWithNoType | defaultType: "SUPER GM" }}
+</div>
+<div>
+  <h2>Default Type pipe with no type on the content</h2>
+  {{ contentWithNoType | defaultType }}
+</div>
