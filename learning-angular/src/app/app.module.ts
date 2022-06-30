@@ -11,6 +11,7 @@ import { DefaultTypePipe } from './pipes/default-type.pipe';
 import { ContentTaggedPipe } from './pipes/content-tagged.pipe';
 import { HighlighterDirective } from './directives/highlighter.directive';
 import { DirectivePlaygroundComponent } from './directive-playground/directive-playground.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DirectivePlaygroundComponent } from './directive-playground/directive-p
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
