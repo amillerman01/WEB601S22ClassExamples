@@ -8,6 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "generateInterface": "ng generate interface",
+    "generateComponent": "ng generate c",
     "generateflatrouting": "ng generate module app-routing --flat"
   },
   "private": true,

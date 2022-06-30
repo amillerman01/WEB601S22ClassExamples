@@ -12,6 +12,7 @@ import { ContentTaggedPipe } from './pipes/content-tagged.pipe';
 import { HighlighterDirective } from './directives/highlighter.directive';
 import { DirectivePlaygroundComponent } from './directive-playground/directive-playground.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ContentListComponent } from './content-list/content-list.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AppRoutingModule } from './app-routing.module';
     DefaultTypePipe,
     ContentTaggedPipe,
     HighlighterDirective,
-    DirectivePlaygroundComponent
+    DirectivePlaygroundComponent,
+    ContentListComponent
   ],
   imports: [
     BrowserModule,
