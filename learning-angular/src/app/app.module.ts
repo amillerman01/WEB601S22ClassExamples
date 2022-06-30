@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ContentListComponent } from './content-list/content-list.component';
 import { ContentDetailComponent } from './content-detail/content-detail.component';
 import { InvalidLinkComponent } from './invalid-link/invalid-link.component';
+import { TopNavComponent } from './top-nav/top-nav.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { InvalidLinkComponent } from './invalid-link/invalid-link.component';
     DirectivePlaygroundComponent,
     ContentListComponent,
     ContentDetailComponent,
-    InvalidLinkComponent
+    InvalidLinkComponent,
+    TopNavComponent
   ],
   imports: [
     BrowserModule,
