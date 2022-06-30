@@ -16,6 +16,7 @@ import { ContentListComponent } from './content-list/content-list.component';
 import { ContentDetailComponent } from './content-detail/content-detail.component';
 import { InvalidLinkComponent } from './invalid-link/invalid-link.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
+import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { TopNavComponent } from './top-nav/top-nav.component';
     ContentListComponent,
     ContentDetailComponent,
     InvalidLinkComponent,
-    TopNavComponent
+    TopNavComponent,
+    BottomNavComponent
   ],
   imports: [
     BrowserModule,
