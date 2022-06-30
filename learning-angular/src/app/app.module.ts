@@ -17,6 +17,8 @@ import { ContentDetailComponent } from './content-detail/content-detail.componen
 import { InvalidLinkComponent } from './invalid-link/invalid-link.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
+import { BasicCardsListComponent } from './basic-cards-list/basic-cards-list.component';
+import { TutorialsListComponent } from './tutorials-list/tutorials-list.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
     ContentDetailComponent,
     InvalidLinkComponent,
     TopNavComponent,
-    BottomNavComponent
+    BottomNavComponent,
+    BasicCardsListComponent,
+    TutorialsListComponent
   ],
   imports: [
     BrowserModule,

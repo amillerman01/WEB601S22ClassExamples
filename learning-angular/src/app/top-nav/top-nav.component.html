@@ -1,5 +1,7 @@
 <ul>
-  <li><a routerLink="/content" routerLinkActive="active">List</a></li>
+  <li><a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+  <li><a routerLink="/tutorials" routerLinkActive="active">Class Examples</a></li>
+  <li><a routerLink="/content" routerLinkActive="active">Content List</a></li>
   <li><a routerLink="/content/42" routerLinkActive="active">The answer to the universe and everything</a></li>
   <li><a routerLink="/someinvalidlink" routerLinkActive="active">This leads to nowhereland</a></li>
 </ul>
