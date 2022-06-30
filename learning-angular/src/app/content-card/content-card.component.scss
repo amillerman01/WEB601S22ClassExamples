@@ -41,3 +41,13 @@ div.type {
 .not-found {
   font-weight: bold;
 }
+
+a.content-detail-button {
+  display: flex;
+  justify-content: center;
+  margin: 8px auto;
+  padding: 8px;
+  background-color: red;
+  width: fit-content;
+  /* we don't have safari users */
+}

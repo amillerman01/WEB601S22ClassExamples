@@ -1,28 +1,33 @@
-<!-- <h2 *ngIf="this.contentItem"> -->
-<!-- don't need to do the if statement check if we're using the ? on the item below-->
-<h2 [ngStyle]="nameStyle" appHighlighter [colour]="contentItem?.type == 'GM' ? 'purple': 'red'">
-  {{ contentItem?.name }}
-</h2>
-<!-- <img *ngIf="contentItem" src="{{contentItem.imageUrl}}"> -->
-<img *ngIf="contentItem" [src]="contentItem.imageUrl">
-<p class="body" *ngIf="contentItem && contentItem.body; else elseBlockNameIsWhateverYouWant">
-  {{contentItem.body}}
-</p>
-<ng-template #elseBlockNameIsWhateverYouWant>
-  <p class="not-found">No body content found</p>
-</ng-template>
-<!-- Just using the enum for the switch case check -->
-<ng-template [ngIf]="contentItem">
-  <div class="type" [ngSwitch]='contentItem.type'>
-    <span *ngSwitchCase="ChessPlayerTitleENUMValues.GM">Grand Master</span>
-    <span *ngSwitchCase='ChessPlayerTitleENUMValues.IM'>International Master</span>
-    <span *ngSwitchCase='ChessPlayerTitleENUMValues.FM'>FIDE Master</span>
-  </div>
-</ng-template>
-<!-- We can have another enum set for storing the title names themselves -->
-<!-- <ng-template [ngIf]="contentItem">
+<ng-container *ngIf="contentItem">
+  <!-- <h2 *ngIf="this.contentItem"> -->
+  <!-- don't need to do the if statement check if we're using the ? on the item below-->
+  <h2 [ngStyle]="nameStyle" appHighlighter [colour]="contentItem?.type == 'GM' ? 'purple': 'red'">
+    {{ contentItem?.name }}
+  </h2>
+  <!-- <img *ngIf="contentItem" src="{{contentItem.imageUrl}}"> -->
+  <img *ngIf="contentItem" [src]="contentItem.imageUrl">
+  <p class="body" *ngIf="contentItem && contentItem.body; else elseBlockNameIsWhateverYouWant">
+    {{contentItem.body}}
+  </p>
+  <ng-template #elseBlockNameIsWhateverYouWant>
+    <p class="not-found">No body content found</p>
+  </ng-template>
+  <!-- Just using the enum for the switch case check -->
+  <ng-template [ngIf]="contentItem">
+    <div class="type" [ngSwitch]='contentItem.type'>
+      <span *ngSwitchCase="ChessPlayerTitleENUMValues.GM">Grand Master</span>
+      <span *ngSwitchCase='ChessPlayerTitleENUMValues.IM'>International Master</span>
+      <span *ngSwitchCase='ChessPlayerTitleENUMValues.FM'>FIDE Master</span>
+    </div>
+  </ng-template>
+  <a class="content-detail-button" [routerLink]="['/content', contentItem.id]" routerLinkActive="active">
+    Content Details
+  </a>
+  <!-- We can have another enum set for storing the title names themselves -->
+  <!-- <ng-template [ngIf]="contentItem">
   <span>{{ ChessPlayerTitleName[(contentItem.type as string) || ""] }}</span>
 </ng-template> -->
-<!-- <h2 *ngIf="this.contentItem2">
+  <!-- <h2 *ngIf="this.contentItem2">
   {{ contentItem2.name }}
 </h2> -->
+</ng-container>
