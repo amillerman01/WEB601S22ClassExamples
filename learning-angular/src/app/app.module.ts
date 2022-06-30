@@ -13,6 +13,8 @@ import { HighlighterDirective } from './directives/highlighter.directive';
 import { DirectivePlaygroundComponent } from './directive-playground/directive-playground.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ContentListComponent } from './content-list/content-list.component';
+import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { InvalidLinkComponent } from './invalid-link/invalid-link.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ContentListComponent } from './content-list/content-list.component';
     ContentTaggedPipe,
     HighlighterDirective,
     DirectivePlaygroundComponent,
-    ContentListComponent
+    ContentListComponent,
+    ContentDetailComponent,
+    InvalidLinkComponent
   ],
   imports: [
     BrowserModule,
