@@ -20,9 +20,9 @@ export class ContentService {
   // }
 
   // R
-  // getContentItem(id: number): Observable<Content> {
-  //   // return ;
-  // }
+  getContentItem(id: number): Observable<Content> {
+    return of(CHESSPLAYERS[id]);
+  }
 
   // U
   // updateContentItem(newContent: Content): Observable<Content[]> {

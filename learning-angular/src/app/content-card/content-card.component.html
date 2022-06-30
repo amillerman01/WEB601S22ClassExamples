@@ -6,12 +6,6 @@
   </h2>
   <!-- <img *ngIf="contentItem" src="{{contentItem.imageUrl}}"> -->
   <img *ngIf="contentItem" [src]="contentItem.imageUrl">
-  <p class="body" *ngIf="contentItem && contentItem.body; else elseBlockNameIsWhateverYouWant">
-    {{contentItem.body}}
-  </p>
-  <ng-template #elseBlockNameIsWhateverYouWant>
-    <p class="not-found">No body content found</p>
-  </ng-template>
   <!-- Just using the enum for the switch case check -->
   <ng-template [ngIf]="contentItem">
     <div class="type" [ngSwitch]='contentItem.type'>
