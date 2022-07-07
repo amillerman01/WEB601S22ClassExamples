@@ -8,6 +8,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ContentService {
 
+  private httpOptions = {
+    headers: new HttpHeaders({
+      'Content-type':
+        'application/json'
+    })
+  };
+
   constructor(private http: HttpClient) { }
 
   getContent(): Observable<Content[]> {
@@ -15,13 +22,12 @@ export class ContentService {
   }
 
   // C
-  // addContentItem(newContent: Content): Observable<Content> {
-  //   return
-  // }
+  addContentItem(newContent: Content): Observable<Content> {
+    return this.http.post<Content>("/api/chess", newContent, this.httpOptions)
+  }
 
   // R
   getContentItem(id: number): Observable<Content> {
-    // return of(CHESSPLAYERS[id]);
     console.log("Now getting it from the server!");
     return this.http.get<Content>("/api/chess/" + id);
   }
