@@ -16,6 +16,7 @@ import { PipesModule } from './pipes/pipes.module';
 import { HttpClientModule } from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from "./services/in-memory-data.service";
+import { AddEditContentComponent } from './add-edit-content/add-edit-content.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { InMemoryDataService } from "./services/in-memory-data.service";
     ContentDetailComponent,
     InvalidLinkComponent,
     TopNavComponent,
-    BottomNavComponent
+    BottomNavComponent,
+    AddEditContentComponent
   ],
   imports: [
     BrowserModule,

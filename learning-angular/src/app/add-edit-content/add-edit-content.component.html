@@ -1,0 +1,21 @@
+<label>
+  Name:
+  <input [(ngModel)]="contentItem.name">
+</label>
+<label>
+  Type:
+  <input [(ngModel)]="contentItem.type">
+</label>
+<label>
+  Image URL:
+  <input [(ngModel)]="contentItem.imageUrl">
+</label>
+<label>
+  Body:
+  <textarea [(ngModel)]="contentItem.body"></textarea>
+</label>
+<label>
+  Tags:
+  <input [(ngModel)]="tempTags">
+</label>
+<button (click)="addContentToServer()">Add new content</button>
