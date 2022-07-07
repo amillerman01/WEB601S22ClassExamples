@@ -12,9 +12,9 @@ export class InMemoryDataService implements InMemoryDbService {
 
   createDb() {
     // setting it to the value of our array of content
-    const content: Content[] = CHESSPLAYERS;
+    const chess: Content[] = CHESSPLAYERS;
     return {
-      content: content
+      chess: chess
     };
   }
 

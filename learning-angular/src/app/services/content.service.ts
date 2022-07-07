@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Content } from '../content';
-import { CHESSPLAYERS } from '../data/mock-content-db';
 import { Observable, of } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContentService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getContent(): Observable<Content[]> {
-    return of(CHESSPLAYERS);
+    return this.http.get<Content[]>("/api/chess");
   }
 
   // C
@@ -21,7 +21,9 @@ export class ContentService {
 
   // R
   getContentItem(id: number): Observable<Content> {
-    return of(CHESSPLAYERS[id]);
+    // return of(CHESSPLAYERS[id]);
+    console.log("Now getting it from the server!");
+    return this.http.get<Content>("/api/chess/" + id);
   }
 
   // U
