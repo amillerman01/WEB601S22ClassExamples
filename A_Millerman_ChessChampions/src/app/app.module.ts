@@ -9,7 +9,6 @@ import { HighlightImportantDataDirective } from './directives/highlight-importan
 import { ContentDetailComponent } from './content-detail/content-detail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ContentSearchComponent } from './content-search/content-search.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +18,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     FilterChessPlayerTypePipe,
     HighlightImportantDataDirective,
     ContentDetailComponent,
-    ContentSearchComponent,
-    PageNotFoundComponent
+    ContentSearchComponent
   ],
   imports: [
     BrowserModule,
