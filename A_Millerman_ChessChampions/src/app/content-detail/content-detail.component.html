@@ -1,15 +1,19 @@
 <div *ngIf="individualChessPlayer">
-  <header class="title" appHighlightImportantData highlightType="title" colour="cadetblue">{{
-    individualChessPlayer.title }}
+  <header class="title" appHighlightImportantData highlightType="title" colour="cadetblue">
+    {{ individualChessPlayer.title }}
+    <span class="author" appHighlightImportantData highlightType="author" colour="dodgerblue">
+      Author: <span>{{ individualChessPlayer.author }}</span>
+    </span>
   </header>
-  <img *ngIf="individualChessPlayer.imageLink; else defaultChessImage" [src]="individualChessPlayer.imageLink">
+  <div class="image-wrapper">
+    <img *ngIf="individualChessPlayer.imageLink; else defaultChessImage" [src]="individualChessPlayer.imageLink">
+    <div class="type">
+      {{ individualChessPlayer.type }}
+    </div>
+  </div>
   <p *ngIf="individualChessPlayer.body">
     {{ individualChessPlayer.body }}
   </p>
-  <div class="author" appHighlightImportantData highlightType="author" colour="dodgerblue">{{
-    individualChessPlayer.author }}
-  </div>
-  <div appHighlightImportantData [highlightType]="'type'" class="type">{{ individualChessPlayer.type }}</div>
   <div class="hashtags" *ngIf="individualChessPlayer.hashtags">
     <span appHighlightImportantData highlightType="tag" *ngFor="let hashtag of individualChessPlayer.hashtags">
       #{{ hashtag }}
@@ -22,10 +26,8 @@
       src="https://images.chesscomfiles.com/uploads/v1/blog/291978.333e4ddb.668x375o.576e795e2298@2x.png">
   </ng-template>
 
-  <div>
+  <div class="buttons-wrapper">
     <a routerLink="/list">Back to list</a>
-  </div>
-  <div>
     <a *ngIf="individualChessPlayer.id > 0" [routerLink]="['/detail', individualChessPlayer.id - 1]">
       Previous player
     </a>
