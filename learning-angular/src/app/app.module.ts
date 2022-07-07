@@ -13,6 +13,10 @@ import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
 import { DirectivesModule } from './directives/directives.module';
 import { PipesModule } from './pipes/pipes.module';
 
+import { HttpClientModule } from "@angular/common/http";
+import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
+import { InMemoryDataService } from "./services/in-memory-data.service";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +32,13 @@ import { PipesModule } from './pipes/pipes.module';
     FormsModule,
     AppRoutingModule,
     DirectivesModule,
-    PipesModule
+    PipesModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, {
+      delay: 1000,
+    }),
+
   ],
   providers: [],
   bootstrap: [AppComponent]
