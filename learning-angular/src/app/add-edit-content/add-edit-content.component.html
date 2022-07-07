@@ -1,4 +1,8 @@
 <label>
+  ID (for updating):
+  <input type="number" [(ngModel)]="contentItem.id">
+</label>
+<label>
   Name:
   <input [(ngModel)]="contentItem.name">
 </label>
@@ -18,4 +22,6 @@
   Tags:
   <input [(ngModel)]="tempTags">
 </label>
-<button (click)="addContentToServer()">Add new content</button>
+<button (click)="+(contentItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() ">
+  Add new content
+</button>

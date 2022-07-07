@@ -17,11 +17,19 @@ export class AddEditContentComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   addContentToServer(): void {
     this.contentItem.tags = this.tempTags.split(", ");
     this.contentService.addContentItem(this.contentItem)
       .subscribe(newContentFromServer =>
         console.log("Success! New content added", newContentFromServer)
+      );
+  }
+  updateContentOnServer(): void {
+    this.contentItem.tags = this.tempTags.split(", ");
+    this.contentService.updateContent(this.contentItem)
+      .subscribe(() =>
+        console.log("Content updated successfully", this.contentItem)
       );
   }
 

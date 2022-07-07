@@ -33,9 +33,10 @@ export class ContentService {
   }
 
   // U
-  // updateContentItem(newContent: Content): Observable<Content[]> {
-  //   return
-  // }
+  // content item needs to have the id set correctly
+  updateContent(contentItem: Content): Observable<any> {
+    return this.http.put<any>("api/chess", contentItem, this.httpOptions);
+  }
 
   // D
   deleteContentItem(newContent: Content): Observable<undefined> {
