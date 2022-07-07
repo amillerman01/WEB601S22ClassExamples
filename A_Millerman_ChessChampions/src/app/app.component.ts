@@ -10,26 +10,6 @@ import { ChessChampionService } from './services/chess-champion.service';
 })
 export class AppComponent {
   title = 'A_Millerman_ChessChampions';
-  individualPlayer: Content = DEFAULTCHESSCONTENT;
 
-  constructor(private chessChampionService: ChessChampionService) {
-
-  }
-
-  ngOnInit(): void {
-    // getContentItem test
-    this.chessChampionService.getContentItem(1).subscribe(chessChampionsSingleItem => {
-      console.log("App component - Got the content item: ", chessChampionsSingleItem);
-      this.individualPlayer = chessChampionsSingleItem;
-    });
-
-  }
-
-  checkForIdInList(idValue: string): void {
-    this.chessChampionService.getContentItem(Number(idValue)).subscribe(chessChampionsSingleItem => {
-      console.log("App component - Got the content item AGAIN: ", chessChampionsSingleItem);
-      this.individualPlayer = chessChampionsSingleItem;
-    });
-  }
-
+  constructor() { }
 }

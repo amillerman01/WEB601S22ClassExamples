@@ -1,1 +1,15 @@
-<p>content-search works!</p>
+<div class="chess-search">
+  <label>
+    Chess Champion Search:
+    <input type="number" autofocus #idNumber>
+  </label>
+  <br>
+  <button (click)="checkForIdInList(idNumber.value)">Check for player at id</button>
+</div>
+
+<app-content-card *ngIf="individualPlayer.id !== -1" [chessPlayer]="individualPlayer"
+  class="single-item-on-app-component"></app-content-card>
+
+<div class="error" *ngIf="individualPlayer.id === -1">
+  Error, no player at that id number
+</div>
