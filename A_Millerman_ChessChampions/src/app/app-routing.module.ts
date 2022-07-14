@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ChangeContentComponent } from './change-content/change-content.component';
 import { ContentDetailComponent } from './content-detail/content-detail.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { ContentSearchComponent } from './content-search/content-search.component';
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: "search",
     component: ContentSearchComponent,
+  },
+  {
+    path: "addContent",
+    component: ChangeContentComponent,
   },
   {
     path: '**',
