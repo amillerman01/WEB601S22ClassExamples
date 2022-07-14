@@ -9,10 +9,10 @@ import { Content } from '../models/content';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     // setting it to the value of our array of content
-    const content: Content[] = CHESSCHAMPIONS;
-    return { content };
+    const champions: Content[] = CHESSCHAMPIONS;
+    return { champions };
   }
-  genId(content: Content[]): number {
-    return content.length > 0 ? Math.max(...content.map(c => c.id || 0)) + 1 : 0;
+  genId(champions: Content[]): number {
+    return champions.length > 0 ? Math.max(...champions.map(c => c.id || 0)) + 1 : 0;
   }
 }
