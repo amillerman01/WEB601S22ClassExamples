@@ -1,4 +1,5 @@
-<h1>Add Content</h1>
+<h1 *ngIf="this.newContent.id === -1">Add Content</h1>
+<h1 *ngIf="this.newContent.id !== -1">Update Content</h1>
 <label>
   Title
   <input [(ngModel)]="newContent.title">
@@ -23,4 +24,5 @@
   Hashtags
   <input [(ngModel)]="newContent.hashtags">
 </label> -->
-<button (click)="addContent()">Add Content</button>
+<button *ngIf="this.newContent.id === -1" (click)="addContent()">Add Content</button>
+<button *ngIf="this.newContent.id !== -1" (click)="updateContent()">Update Content</button>

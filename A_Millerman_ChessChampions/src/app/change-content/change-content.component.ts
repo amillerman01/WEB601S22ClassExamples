@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Content } from '../models/content';
 import { ChessChampionService } from '../services/chess-champion.service';
 
@@ -10,7 +11,8 @@ import { ChessChampionService } from '../services/chess-champion.service';
 export class ChangeContentComponent implements OnInit {
 
   newContent: Content;
-  constructor(private chessService: ChessChampionService) {
+  constructor(private chessService: ChessChampionService,
+    private route: ActivatedRoute) {
     this.newContent = {
       title: '',
       author: ''
@@ -18,6 +20,15 @@ export class ChangeContentComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe((params) => {
+      let id = Number(params.get("id") ?? -1);
+
+      this.newContent.id = id;
+      // this.chessChampionService.getContentItem(this.id)
+      //   .subscribe((individualChessPlayer) => {
+      //     this.individualChessPlayer = individualChessPlayer;
+      //   });
+    });
   }
 
   addContent(): void {
@@ -30,5 +41,15 @@ export class ChangeContentComponent implements OnInit {
       console.log("The content the server gave me back: ", newItem);
     })
   }
+  updateContent(): void {
+    console.log("Content before I sent the server: ", this.newContent);
+    this.chessService.updateContentItem(this.newContent).subscribe(() => {
+      this.newContent = {
+        title: '',
+        author: ''
+      }
+      console.log("The server updated the content");
+    })
 
+  }
 }
