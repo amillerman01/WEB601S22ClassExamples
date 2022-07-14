@@ -28,6 +28,7 @@
 
   <div class="buttons-wrapper">
     <a routerLink="/list">Back to list</a>
+    <a routerLink="/updateContent/{{individualChessPlayer.id}}">Update player</a>
     <ng-container *ngIf="individualChessPlayer.id">
       <a [routerLink]="['/detail', individualChessPlayer.id - 1]">
         Previous player
