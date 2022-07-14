@@ -28,8 +28,10 @@
 
   <div class="buttons-wrapper">
     <a routerLink="/list">Back to list</a>
-    <a *ngIf="individualChessPlayer.id > 0" [routerLink]="['/detail', individualChessPlayer.id - 1]">
-      Previous player
-    </a>
+    <ng-container *ngIf="individualChessPlayer.id">
+      <a [routerLink]="['/detail', individualChessPlayer.id - 1]">
+        Previous player
+      </a>
+    </ng-container>
   </div>
 </div>
