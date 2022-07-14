@@ -9,6 +9,7 @@ import { HighlightImportantDataDirective } from './directives/highlight-importan
 import { ContentDetailComponent } from './content-detail/content-detail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ContentSearchComponent } from './content-search/content-search.component';
+import { TopNavigationComponent } from './top-navigation/top-navigation.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContentSearchComponent } from './content-search/content-search.componen
     FilterChessPlayerTypePipe,
     HighlightImportantDataDirective,
     ContentDetailComponent,
-    ContentSearchComponent
+    ContentSearchComponent,
+    TopNavigationComponent
   ],
   imports: [
     BrowserModule,
