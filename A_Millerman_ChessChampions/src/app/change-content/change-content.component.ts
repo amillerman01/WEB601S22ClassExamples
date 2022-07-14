@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Content } from '../models/content';
 import { ChessChampionService } from '../services/chess-champion.service';
 
@@ -10,9 +10,11 @@ import { ChessChampionService } from '../services/chess-champion.service';
 })
 export class ChangeContentComponent implements OnInit {
 
+  showLoading: boolean = false;
   newContent: Content;
   constructor(private chessService: ChessChampionService,
-    private route: ActivatedRoute) {
+    private route: ActivatedRoute,
+    private router: Router) {
     this.newContent = {
       title: '',
       author: ''
@@ -25,9 +27,18 @@ export class ChangeContentComponent implements OnInit {
 
       this.newContent.id = id;
       if (this.newContent.id !== -1) {
+        this.showLoading = true;
         this.chessService.getContentItem(this.newContent.id)
-          .subscribe((chessPlayerToBeUpdated) => {
-            this.newContent = chessPlayerToBeUpdated;
+          .subscribe({
+            next: (chessPlayerToBeUpdated) => {
+              this.showLoading = false;
+              this.newContent = chessPlayerToBeUpdated;
+            },
+            error: () => {
+              console.log(`Error: Content at id ${this.newContent.id} does not exist.`);
+              console.log("Redirecting to add content");
+              this.router.navigate(["/addContent"]);
+            }
           });
       }
     });

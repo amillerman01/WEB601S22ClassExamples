@@ -1,5 +1,8 @@
 <h1 *ngIf="this.newContent.id === -1">Add Content</h1>
 <h1 *ngIf="this.newContent.id !== -1">Update Content</h1>
+<h4 class="loading" *ngIf="showLoading">
+  Loading content from server...
+</h4>
 <label>
   Title
   <input [(ngModel)]="newContent.title">

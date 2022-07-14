@@ -1,0 +1,25 @@
+:host {
+  display: block;
+}
+
+label {
+  display: block;
+  margin: 8px;
+  width: 100%;
+  max-width: 400px;
+
+  input {
+    margin-top: 8px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+button {
+  margin: 8px;
+}
+
+.loading {
+  color: #ff1121;
+}
